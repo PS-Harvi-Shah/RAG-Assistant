@@ -31,7 +31,7 @@ A **Streamlit-based local RAG (Retrieval-Augmented Generation)** application tha
 ```bash
 git clone https://github.com/PS-Harvi-Shah/RAG-Assistant.git
 cd RAG-Assistant
-
+```
 ### 2️⃣ Create Virtual Environment
 ```bash
 python -m venv venv
@@ -55,4 +55,5 @@ pip install -r requirements.txt
 ▶️ Run the Application
 ```bash
 streamlit run app.py
+
 
