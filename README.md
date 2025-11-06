@@ -60,7 +60,7 @@ pip install -r requirements.txt
 ▶️ Run the Application
 ```bash
 streamlit run app.py
-
+```
 
 ### 🧠 How It Works (Architecture)
 YouTube URL → Transcript → Chunking → Embeddings → FAISS Vector Store
@@ -68,6 +68,8 @@ YouTube URL → Transcript → Chunking → Embeddings → FAISS Vector Store
                     User Query
                          ↓
          Query Embedding → Top Similar Chunks → Gemini API → Answer
+         
+--- 
 
 ###💡 How to Use
 
@@ -78,3 +80,4 @@ YouTube URL → Transcript → Chunking → Embeddings → FAISS Vector Store
 - Create embeddings and store them locally.
 3. Ask any question about the video content.
 4. The app uses Gemini + RAG to generate an answer based on retrieved transcript chunks.
+
