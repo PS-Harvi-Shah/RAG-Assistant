@@ -1,4 +1,4 @@
-# 🎬 YouTube Video Summarizer & Chat Assistant
+# YouTube Video Summarizer & Chat Assistant
 
 A **Streamlit-based RAG (Retrieval-Augmented Generation)** application that allows users to **chat with YouTube videos** — ask questions
 
@@ -44,7 +44,7 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-4️⃣ Get a Gemini API Key
+### 4️⃣ Get a Gemini API Key
 ```bash
 - Go to https://ai.google.dev/
 - Sign in → Get API Key from Google AI Studio
@@ -81,7 +81,3 @@ YouTube URL → Transcript → Chunking → Embeddings → FAISS Vector Store
 - Create embeddings and store them locally.
 3. Ask any question about the video content.
 4. The app uses Gemini + RAG to generate an answer based on retrieved transcript chunks.
-
-
-
-
