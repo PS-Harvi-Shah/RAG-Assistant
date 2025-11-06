@@ -72,7 +72,7 @@ YouTube URL → Transcript → Chunking → Embeddings → FAISS Vector Store
 ```
 --- 
 
-###💡 How to Use
+### 💡 How to Use
 
 1. Enter a YouTube video URL (supports both full and shortened links).
 2. Click “Process Video” – the app will:
@@ -81,5 +81,6 @@ YouTube URL → Transcript → Chunking → Embeddings → FAISS Vector Store
 - Create embeddings and store them locally.
 3. Ask any question about the video content.
 4. The app uses Gemini + RAG to generate an answer based on retrieved transcript chunks.
+
 
 
