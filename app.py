@@ -22,8 +22,6 @@ if not api_key:
 genai.configure(api_key=api_key)
 
 
-# ⚙️ Helper Functions
-
 def extract_video_id(url):
     match = re.search(r"(?:v=|youtu\.be/)([a-zA-Z0-9_-]{11})", url)
     return match.group(1) if match else None
@@ -34,18 +32,14 @@ def get_transcript(video_url):
     if not video_id:
         raise ValueError("Invalid YouTube URL")
 
-    # Get transcript list and fetch the first available English transcript
     transcript_list = YouTubeTranscriptApi().list(video_id)
     
-    # Try to find English transcript (manual or auto-generated)
     for transcript in transcript_list:
         if transcript.language_code.startswith('en'):
             transcript_data = transcript.fetch()
-            # Access text using .text attribute instead of subscript
             text = " ".join([snippet.text for snippet in transcript_data if snippet.text.strip()])
             return text
     
-    # If no English transcript found, use the first available
     if transcript_list:
         transcript_data = transcript_list[0].fetch()
         text = " ".join([snippet.text for snippet in transcript_data if snippet.text.strip()])
@@ -82,7 +76,6 @@ def load_vector_store(save_path="data_faiss.pkl"):
 def search_similar(query_embedding, index, texts, top_k=3):
     D, I = index.search(query_embedding, top_k)
     return [texts[i] for i in I[0]]
-
 
 
 # RAG pipeline
