@@ -33,20 +33,26 @@ git clone https://github.com/PS-Harvi-Shah/RAG-Assistant.git
 cd RAG-Assistant
 
 ### 2️⃣ Create Virtual Environment
+```bash
 python -m venv venv
 venv\Scripts\activate       
 
 ### 3️⃣ Install Dependencies
+```bash
 pip install -r requirements.txt
 
 4️⃣ Get a Gemini API Key
+```bash
 - Go to https://ai.google.dev/
 - Sign in → Get API Key from Google AI Studio
 - Copy your key.
 
 ### 5️⃣ Set Your API Key
+```bash
 - Make .evn folder and set the api key: 
   GEMINI_API_KEY "your_api_key_here"
 
 ▶️ Run the Application
+```bash
 streamlit run app.py
+
